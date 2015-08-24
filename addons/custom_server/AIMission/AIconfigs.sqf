@@ -150,22 +150,22 @@ AI WEAPONS, UNIFORMS, VESTS AND GEAR
 
 **********************************************************************************/
 		_RifleSniper = [ 
-			"srifle_EBR_F","srifle_GM6_F","srifle_LRR_F","srifle_DMR_01_F",			
+			"srifle_EBR_F","srifle_GM6_F","srifle_LRR_F","srifle_DMR_01_F"		
 		];
 
 		_RifleAssault = [
 			"arifle_Katiba_F","arifle_Katiba_C_F","arifle_Katiba_GL_F","arifle_MXC_F","arifle_MX_F","arifle_MX_GL_F","arifle_MXM_F","arifle_SDAR_F",
 			"arifle_TRG21_F","arifle_TRG20_F","arifle_TRG21_GL_F","arifle_Mk20_F","arifle_Mk20C_F","arifle_Mk20_GL_F","arifle_Mk20_plain_F","arifle_Mk20C_plain_F","arifle_Mk20_GL_plain_F",
-			"arifle_MXM_Black_F","arifle_MX_GL_Black_F","arifle_MX_Black_F","arifle_MXC_Black_F","arifle_MX_SW_F","arifle_MX_SW_Black_F",
+			"arifle_MXM_Black_F","arifle_MX_GL_Black_F","arifle_MX_Black_F","arifle_MXC_Black_F","arifle_MX_SW_F","arifle_MX_SW_Black_F"
 			
 		];
 
 		_RifleLMG = [
-			"LMG_Mk200_F","LMG_Zafir_F",
+			"LMG_Mk200_F","LMG_Zafir_F"
 		];
 
 		_RifleOther = [
-			"SMG_01_F","SMG_02_F","Rollins_F",
+			"SMG_01_F","SMG_02_F","Rollins_F"
 		];
 
 		_Pistols = [
