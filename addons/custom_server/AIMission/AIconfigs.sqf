@@ -37,15 +37,7 @@ Last modified 8/1/15
 	blck_useSignalEnd = true; // When true a smoke grenade will appear at the loot crate for 2 min after mission completion.
 	
 	// PLAYER PENALTIES
-	blck_RunGear = true;	// When set to true, AI that have been run over will ve stripped of gear, and the vehicle will be given blck_RunGearDamage of damage.
-	blck_RunGearDamage = 0.2; // Damage applied to player vehicle for each AI run over
-	blck_VK_Gear = true; // When set to true, AI that have been killed by a player in a vehicle in the list of forbidden vehicles or using a forbiden gun will be stripped of gear and the vehicle will be given blck_RunGearDamage of damage
-	blck_VK_RunoverDamage = true; // when the AI was run over blck_RunGearDamage of damage will be applied to the killer's vehicle.
-	blck_VK_GunnerDamage = true; // when the AI was killed by a gunner on a vehicle that is is in the list of forbidden vehicles, blck_RunGearDamage of damage will be applied to the killer's vehicle each time an AI is killed with a vehicle's gun.
-	blck_forbidenVehicles = ["B_MRAP_01_hmg_F","O_MRAP_02_hmg_F"]; // Add any vehicles for which you wish to forbid vehicle kills	
-	// For a listing of the guns mounted on various land vehicles see the following link: https://community.bistudio.com/wiki/Arma_3_CfgWeapons_Vehicle_Weapons
-	// HMG_M2 is mounted on the armed offroad that is spawned by Epoch	
-	blck_forbidenVehicleGuns = ["LMG_RCWS","LMG_M200","HMG_127","HMG_127_APC",/*"HMG_M2",*/"HMG_NSVT","GMG_40mm","GMG_UGV_40mm","autocannon_40mm_CTWS","autocannon_30mm_CTWS","autocannon_35mm","LMG_coax","autocannon_30mm"]; // Add any vehicles for which you wish to forbid vehicle kills, o
+	
 	
 	// GLOBAL MISSION PARAMETERS
 	blck_useMines = false;   // when true mines are spawned around the mission area. these are cleaned up when a player reaches the crate.
@@ -57,8 +49,8 @@ Last modified 8/1/15
 	//Defines how many AI Vehicles to spawn. Set this to -1 to disable spawning of static weapons or vehicles. To discourage players runniing with with vehicles, spawn more B_GMG_01_high
 	blck_SpawnVeh_Major = 3; // Number of static weapons at Orange Missions
 	blck_SpawnVeh_Major2 = 2; // Number of static weapons at Green Missions
-	blck_SpawnVeh_Minor = -1;  // Number of static weapons at Blue Missions
-	blck_SpawnVeh_Minor2 = -1;  // Number of static weapons at Red Missions
+	blck_SpawnVeh_Minor = 1;  // Number of static weapons at Blue Missions
+	blck_SpawnVeh_Minor2 = 1;  // Number of static weapons at Red Missions
 
 	// AI STATIC WEAPON PARAMETERS
 	blck_useStatic = true;  // When true, AI will man static weapons spawned 20-30 meters from the mission center. These are very effective against most vehicles
@@ -150,26 +142,26 @@ AI WEAPONS, UNIFORMS, VESTS AND GEAR
 
 **********************************************************************************/
 		_RifleSniper = [ 
-			"srifle_EBR_F","srifle_GM6_F","srifle_LRR_F","srifle_DMR_01_F","m107Tan_EPOCH","m107_EPOCH","sr25_epoch"			
+			"srifle_EBR_F","srifle_GM6_F","srifle_LRR_F","srifle_DMR_01_F",			
 		];
 
 		_RifleAssault = [
 			"arifle_Katiba_F","arifle_Katiba_C_F","arifle_Katiba_GL_F","arifle_MXC_F","arifle_MX_F","arifle_MX_GL_F","arifle_MXM_F","arifle_SDAR_F",
 			"arifle_TRG21_F","arifle_TRG20_F","arifle_TRG21_GL_F","arifle_Mk20_F","arifle_Mk20C_F","arifle_Mk20_GL_F","arifle_Mk20_plain_F","arifle_Mk20C_plain_F","arifle_Mk20_GL_plain_F",
 			"arifle_MXM_Black_F","arifle_MX_GL_Black_F","arifle_MX_Black_F","arifle_MXC_Black_F","arifle_MX_SW_F","arifle_MX_SW_Black_F",
-			"m16_EPOCH","m16Red_EPOCH","M14_EPOCH","M14Grn_EPOCH","m4a3_EPOCH","AKM_EPOCH","l85a2_epoch"
+			
 		];
 
 		_RifleLMG = [
-			"LMG_Mk200_F","LMG_Zafir_F","m249_EPOCH","m249Tan_EPOCH"
+			"LMG_Mk200_F","LMG_Zafir_F",
 		];
 
 		_RifleOther = [
-			"SMG_01_F","SMG_02_F","Rollins_F","speargun_epoch"
+			"SMG_01_F","SMG_02_F","Rollins_F",
 		];
 
 		_Pistols = [
-			"hgun_PDW2000_F","hgun_ACPC2_F","hgun_Rook40_F","hgun_P07_F","hgun_Pistol_heavy_01_F","hgun_Pistol_heavy_02_F","ruger_pistol_epoch","1911_pistol_epoch","hgun_Pistol_Signal_F"
+			"hgun_PDW2000_F","hgun_ACPC2_F","hgun_Rook40_F","hgun_P07_F","hgun_Pistol_heavy_01_F","hgun_Pistol_heavy_02_F","hgun_Pistol_Signal_F"
 		];	
 		
 		_DLC_MMG = [
@@ -240,8 +232,7 @@ AI WEAPONS, UNIFORMS, VESTS AND GEAR
 			];
 
 	blck_vests = [
-				"V_1_EPOCH","V_2_EPOCH","V_3_EPOCH","V_4_EPOCH","V_5_EPOCH","V_6_EPOCH","V_7_EPOCH","V_8_EPOCH","V_9_EPOCH","V_10_EPOCH","V_11_EPOCH","V_12_EPOCH","V_13_EPOCH","V_14_EPOCH","V_15_EPOCH","V_16_EPOCH","V_17_EPOCH","V_18_EPOCH","V_19_EPOCH","V_20_EPOCH",
-				"V_21_EPOCH","V_22_EPOCH","V_23_EPOCH","V_24_EPOCH","V_25_EPOCH","V_26_EPOCH","V_27_EPOCH","V_28_EPOCH","V_29_EPOCH","V_30_EPOCH","V_31_EPOCH","V_32_EPOCH","V_33_EPOCH","V_34_EPOCH","V_35_EPOCH","V_36_EPOCH","V_37_EPOCH","V_38_EPOCH","V_39_EPOCH","V_40_EPOCH",
+				
 				// DLC Vests
 				"V_PlateCarrierSpec_blk","V_PlateCarrierSpec_mtp","V_PlateCarrierGL_blk","V_PlateCarrierGL_mtp","V_PlateCarrierIAGL_oli"
 			];
@@ -264,7 +255,7 @@ for examples of how you can do this see \Major\Compositions.sqf
 		
 		[  
 			[// Weapons	
-				["MultiGun","EnergyPackLg"],
+				
 				["arifle_Katiba_F","30Rnd_65x39_caseless_green"],
 				["arifle_Katiba_GL_F","30Rnd_65x39_caseless_green"],
 				["arifle_Mk20_F","30Rnd_556x45_Stanag"],
@@ -277,26 +268,19 @@ for examples of how you can do this see \Major\Compositions.sqf
 				["arifle_MXM_F","30Rnd_65x39_caseless_mag"],
 				["arifle_SDAR_F","20Rnd_556x45_UW_mag"],
 				["arifle_TRG20_F","30Rnd_556x45_Stanag"],
-				["m16_EPOCH","30Rnd_556x45_Stanag"],
-				["m16Red_EPOCH","30Rnd_556x45_Stanag"],
-				["M14_EPOCH","20Rnd_762x51_Mag"],
-				["M14Grn_EPOCH","20Rnd_762x51_Mag"],
-				["m4a3_EPOCH","30Rnd_556x45_Stanag"],
+				
 				["SMG_02_F","30Rnd_9x21_Mag"],
 				["SMG_01_F","30Rnd_45ACP_Mag_SMG_01"],
 				["Hgun_PDW2000_F","30Rnd_9x21_Mag"],
-				["M14_EPOCH","20Rnd_762x51_Mag"],
-				["M14Grn_EPOCH","20Rnd_762x51_Mag"],				
+						
 				["arifle_MXM_F","30Rnd_65x39_caseless_mag_Tracer"],
 				["arifle_MXM_Black_F","30Rnd_65x39_caseless_mag_Tracer"],				
-				["m107_EPOCH","5Rnd_127x108_Mag"],
-				["m107Tan_EPOCH","5Rnd_127x108_Mag"],				
+				
 				["srifle_DMR_01_F","10Rnd_762x51_Mag"],
 				["srifle_LRR_F","7Rnd_408_Mag"],
 				["srifle_EBR_F","20Rnd_762x51_Mag"],
 				["srifle_GM6_F","5Rnd_127x108_APDS_Mag"],
-				["m249_EPOCH","200Rnd_556x45_M249"],
-				["m249Tan_EPOCH","200Rnd_556x45_M249"],
+				
 				["LMG_Mk200_F","200Rnd_65x39_cased_Box_Tracer"],
 				["Arifle_MX_SW_F","100Rnd_65x39_caseless_mag_Tracer"],
 				["Arifle_MX_SW_Black_F","100Rnd_65x39_caseless_mag_Tracer"],
@@ -348,31 +332,20 @@ for examples of how you can do this see \Major\Compositions.sqf
 				["optic_AMS_khk",1,3],["optic_AMS_snd",1,3],["optic_KHS_blk",1,3],["optic_KHS_hex",1,3],["optic_KHS_old",1,3],["optic_KHS_tan",1,3]
 			],
 			[// Materials and supplies				
-				["CinderBlocks",5,15],
-				["jerrycan_epoch",1,2],
-				["lighter_epoch",0,1],
-				["CircuitParts",2,3],
-				["WoodLog_EPOCH",5,10],
-				["ItemCorrugatedLg",1,6],
-				["ItemCorrugated",3,10],
-				["ItemMixOil",1,2],
-				["MortarBucket",5,10],
-				["PartPlankPack",10,12],
-				["ItemLockbox",1,2],
-				["EnergyPackLg",1,3]
+				
 			],
 			[//Items
-				["Heal_EPOCH",1,2],["Defib_EPOCH",1,2],["Repair_EPOCH",1,4],["FAK",1,4],["VehicleRepair",1,3],["Rangefinder",1,3],
-				["ItemKiloHemp",1,2],["ItemRuby",1,2],["ItemSilverBar",1,2],["ItemGoldBar10oz",1,2],
-				["ItemSodaRbull",1,3],["ItemSodaOrangeSherbet",1,3],["ItemSodaPurple",1,3],["ItemSodaMocha",1,3],["ItemSodaBurst",1,3],
-				["CookedChicken_EPOCH",1,3],["CookedGoat_EPOCH",1,3],["CookedSheep_EPOCH",1,3],["FoodSnooter",1,3],["FoodMeeps",1,3],["FoodBioMeat",1,3],["ItemTuna",1,3],["ItemSeaBass",1,3],["ItemTrout",1,3]
+				["Exile_Item_InstaDoc",1,2],["Exile_Item_DuctTape",1,4],["Rangefinder",1,3],
+				
+				["Exile_Item_PlasticBottleFreshWater",1,3],["Exile_Item_GloriousKnakworst",1,3],["Exile_Item_Surstromming",1,3],
+				
 			],
 			[ // Backpacks
 				["B_AssaultPack_dgtl",1,2],["B_AssaultPack_khk",1,2],["B_AssaultPack_mcamo",1,2],["B_AssaultPack_ocamo",1,2],["B_AssaultPack_rgr",1,2],["B_AssaultPack_sgg",1,2],
 				["B_Carryall_cbr",1,2],["B_Carryall_khk",1,2],["B_Carryall_mcamo",1,2],["B_Carryall_ocamo",1,2],["B_Carryall_oli",1,2],["B_Carryall_oucamo",1,2],["B_FieldPack_blk",1,2],
 				["B_FieldPack_cbr",1,2],["B_FieldPack_khk",1,2],["B_FieldPack_ocamo",1,2],["B_FieldPack_oli",1,2],["B_FieldPack_oucamo",1,2],["B_Kitbag_cbr",1,2],["B_Kitbag_mcamo",1,2],
 				["B_Kitbag_rgr",1,2],["B_Kitbag_sgg",1,2],["B_Parachute",1,2],["B_TacticalPack_blk",1,2],["B_TacticalPack_mcamo",1,2],["B_TacticalPack_ocamo",1,2],["B_TacticalPack_oli",1,2],
-				["B_TacticalPack_rgr",1,2],["smallbackpack_red_epoch",1,2],["smallbackpack_green_epoch",1,2],["smallbackpack_teal_epoch",1,2],["smallbackpack_pink_epoch",1,2]
+				["B_TacticalPack_rgr",1,2]
 			]
 	];		
 		
@@ -380,7 +353,7 @@ for examples of how you can do this see \Major\Compositions.sqf
 		[
 			[// Weapons
 				// Format is ["Weapon Name","Magazine Name"],
-				["MultiGun","EnergyPackLg"],
+				
 				["arifle_Katiba_F","30Rnd_65x39_caseless_green"],
 				["arifle_Katiba_GL_F","30Rnd_65x39_caseless_green"],
 				["arifle_Mk20_F","30Rnd_556x45_Stanag"],
@@ -394,26 +367,19 @@ for examples of how you can do this see \Major\Compositions.sqf
 				["arifle_MXM_F","30Rnd_65x39_caseless_mag"],
 				["arifle_SDAR_F","20Rnd_556x45_UW_mag"],
 				["arifle_TRG20_F","30Rnd_556x45_Stanag"],
-				["m16_EPOCH","30Rnd_556x45_Stanag"],
-				["m16Red_EPOCH","30Rnd_556x45_Stanag"],
-				["M14_EPOCH","20Rnd_762x51_Mag"],
-				["M14Grn_EPOCH","20Rnd_762x51_Mag"],
-				["m4a3_EPOCH","30Rnd_556x45_Stanag"],
+				
 				["SMG_02_F","30Rnd_9x21_Mag"],
 				["SMG_01_F","30Rnd_45ACP_Mag_SMG_01"],
 				["Hgun_PDW2000_F","30Rnd_9x21_Mag"],
-				["M14_EPOCH","20Rnd_762x51_Mag"],
-				["M14Grn_EPOCH","20Rnd_762x51_Mag"],				
+				
 				["arifle_MXM_F","30Rnd_65x39_caseless_mag_Tracer"],
 				["arifle_MXM_Black_F","30Rnd_65x39_caseless_mag_Tracer"],				
-				["m107_EPOCH","5Rnd_127x108_Mag"],
-				["m107Tan_EPOCH","5Rnd_127x108_Mag"],				
+				
 				["srifle_DMR_01_F","10Rnd_762x51_Mag"],
 				["srifle_LRR_F","7Rnd_408_Mag"],
 				["srifle_EBR_F","20Rnd_762x51_Mag"],
 				["srifle_GM6_F","5Rnd_127x108_APDS_Mag"],
-				["m249_EPOCH","200Rnd_556x45_M249"],
-				["m249Tan_EPOCH","200Rnd_556x45_M249"],
+				
 				["LMG_Mk200_F","200Rnd_65x39_cased_Box_Tracer"],
 				["Arifle_MX_SW_F","100Rnd_65x39_caseless_mag_Tracer"],
 				["Arifle_MX_SW_Black_F","100Rnd_65x39_caseless_mag_Tracer"],
@@ -454,41 +420,27 @@ for examples of how you can do this see \Major\Compositions.sqf
 				["optic_MRD",1,3],["optic_LRPS",1,3],["optic_NVS",1,3],["optic_Nightstalker",1,2],["optic_Nightstalker",1,2],["optic_Nightstalker",1,2],
 				["optic_tws",1,3],["optic_tws_mg",1,3],["muzzle_snds_H",1,3],["muzzle_snds_L",1,3],["muzzle_snds_M",1,3],["muzzle_snds_B",1,3],["muzzle_snds_H_MG",1,3],["muzzle_snds_acp",1,3],
 				["optic_AMS_khk",1,3],["optic_AMS_snd",1,3],["optic_KHS_blk",1,3],["optic_KHS_hex",1,3],["optic_KHS_old",1,3],["optic_KHS_tan",1,3]
+			
+				
 			],
-			[	
-				["CinderBlocks",4,12],
-				["jerrycan_epoch",1,2],
-				["lighter_epoch",1,1],
-				["CircuitParts",2,5],
-				["WoodLog_EPOCH",10,20],
-				["ItemCorrugatedLg",1,3],
-				["ItemCorrugated",2,9],
-				["ItemMixOil",1,2],
-				["MortarBucket",3,6],
-				["PartPlankPack",10,12],
-				["ItemLockbox",1,3],
-				["EnergyPackLg",1,2]
+			[	//Items
+					["Exile_Item_InstaDoc",1,2],["Exile_Item_DuctTape",1,4],["Rangefinder",1,3],
+				
+				["Exile_Item_PlasticBottleFreshWater",1,3],["Exile_Item_GloriousKnakworst",1,3],["Exile_Item_Surstromming",1,3],
 			],
-			[//Items
-				// Format is ["Item name, Minimum number to add, Maximum number to add],
-				["Heal_EPOCH",1,2],["Defib_EPOCH",1,2],["Repair_EPOCH",1,2],["FAK",1,2],["VehicleRepair",1,3],["Rangefinder",1,3],
-				["ItemKiloHemp",1,2],["ItemRuby",1,2],["ItemSilverBar",1,2],["ItemGoldBar10oz",1,2],
-				["ItemSodaRbull",1,3],["ItemSodaOrangeSherbet",1,3],["ItemSodaPurple",1,3],["ItemSodaMocha",1,3],["ItemSodaBurst",1,3],
-				["CookedChicken_EPOCH",1,3],["CookedGoat_EPOCH",1,3],["CookedSheep_EPOCH",1,3],["FoodSnooter",1,3],["FoodMeeps",1,3],["FoodBioMeat",1,3],["ItemTuna",1,3],["ItemSeaBass",1,3],["ItemTrout",1,3]
-			],
-			[ // Backpacks
+			[  // Backpacks
 				["B_AssaultPack_dgtl",1,2],["B_AssaultPack_khk",1,2],["B_AssaultPack_mcamo",1,2],["B_AssaultPack_ocamo",1,2],["B_AssaultPack_rgr",1,2],["B_AssaultPack_sgg",1,2],
 				["B_Carryall_cbr",1,2],["B_Carryall_khk",1,2],["B_Carryall_mcamo",1,2],["B_Carryall_ocamo",1,2],["B_Carryall_oli",1,2],["B_Carryall_oucamo",1,2],["B_FieldPack_blk",1,2],
 				["B_FieldPack_cbr",1,2],["B_FieldPack_khk",1,2],["B_FieldPack_ocamo",1,2],["B_FieldPack_oli",1,2],["B_FieldPack_oucamo",1,2],["B_Kitbag_cbr",1,2],["B_Kitbag_mcamo",1,2],
 				["B_Kitbag_rgr",1,2],["B_Kitbag_sgg",1,2],["B_Parachute",1,2],["B_TacticalPack_blk",1,2],["B_TacticalPack_mcamo",1,2],["B_TacticalPack_ocamo",1,2],["B_TacticalPack_oli",1,2],
-				["B_TacticalPack_rgr",1,2],["smallbackpack_red_epoch",1,2],["smallbackpack_green_epoch",1,2],["smallbackpack_teal_epoch",1,2],["smallbackpack_pink_epoch",1,2]
+				["B_TacticalPack_rgr",1,2]
 			]
 		];
 		
 	blck_BoxesLoot_Minor = 
 		[
 			[// Weapons
-				["MultiGun","EnergyPackLg"],
+				
 				["arifle_Katiba_F","30Rnd_65x39_caseless_green"],
 				["arifle_Katiba_GL_F","30Rnd_65x39_caseless_green"],
 				["arifle_Mk20_F","30Rnd_556x45_Stanag"],
@@ -502,32 +454,25 @@ for examples of how you can do this see \Major\Compositions.sqf
 				["arifle_MXM_F","30Rnd_65x39_caseless_mag"],
 				["arifle_SDAR_F","20Rnd_556x45_UW_mag"],
 				["arifle_TRG20_F","30Rnd_556x45_Stanag"],
-				["m16_EPOCH","30Rnd_556x45_Stanag"],
-				["m16Red_EPOCH","30Rnd_556x45_Stanag"],
-				["M14_EPOCH","20Rnd_762x51_Mag"],
-				["M14Grn_EPOCH","20Rnd_762x51_Mag"],
-				["m4a3_EPOCH","30Rnd_556x45_Stanag"],
+				
 				["SMG_02_F","30Rnd_9x21_Mag"],
 				["SMG_01_F","30Rnd_45ACP_Mag_SMG_01"],
 				["Hgun_PDW2000_F","30Rnd_9x21_Mag"],
-				["M14_EPOCH","20Rnd_762x51_Mag"],
-				["M14Grn_EPOCH","20Rnd_762x51_Mag"],				
+					
 				["arifle_MXM_F","30Rnd_65x39_caseless_mag_Tracer"],
 				["arifle_MXM_Black_F","30Rnd_65x39_caseless_mag_Tracer"],				
-				["m107_EPOCH","5Rnd_127x108_Mag"],
-				["m107Tan_EPOCH","5Rnd_127x108_Mag"],				
+					
 				["srifle_DMR_01_F","10Rnd_762x51_Mag"],
 				["srifle_LRR_F","7Rnd_408_Mag"],
 				["srifle_EBR_F","20Rnd_762x51_Mag"],
 				["srifle_GM6_F","5Rnd_127x108_APDS_Mag"],
-				["m249_EPOCH","200Rnd_556x45_M249"],
-				["m249Tan_EPOCH","200Rnd_556x45_M249"],
+				
 				["LMG_Mk200_F","200Rnd_65x39_cased_Box_Tracer"],
 				["Arifle_MX_SW_F","100Rnd_65x39_caseless_mag_Tracer"],
 				["Arifle_MX_SW_Black_F","100Rnd_65x39_caseless_mag_Tracer"],
 				["LMG_Zafir_F","150Rnd_762x51_Box_Tracer"]		
 			],
-			[//Magazines
+			[	//Magazines
 				["3rnd_HE_Grenade_Shell",1,2],
 				["30Rnd_65x39_caseless_green",3,6],
 				["30Rnd_556x45_Stanag",3,6],
@@ -554,39 +499,27 @@ for examples of how you can do this see \Major\Compositions.sqf
 				["optic_MRD",1,3],["optic_LRPS",1,3],["optic_NVS",1,3],["optic_Nightstalker",1,2],
 				["optic_tws",1,3],["optic_tws_mg",1,3],["muzzle_snds_H",1,3],["muzzle_snds_L",1,3],["muzzle_snds_M",1,3],["muzzle_snds_B",1,3],["muzzle_snds_H_MG",1,3],["muzzle_snds_acp",1,3],
 				["optic_AMS_khk",1,3],["optic_AMS_snd",1,3],["optic_KHS_blk",1,3],["optic_KHS_hex",1,3],["optic_KHS_old",1,3],["optic_KHS_tan",1,3]
+			
+				
 			],
-			[
-				["CinderBlocks",2,6],
-				["jerrycan_epoch",1,3],
-				["lighter_epoch",1,1],
-				["CircuitParts",2,3],
-				["WoodLog_EPOCH",10,20],
-				["ItemCorrugatedLg",0,4],
-				["ItemCorrugated",3,6],
-				["ItemMixOil",1,2],
-				["MortarBucket",1,8],
-				["PartPlankPack",10,12],
-				["ItemLockbox",1,2],
-				["EnergyPackLg",0,1]			
-			],
-			[//Items
-				["Heal_EPOCH",1,2],["Defib_EPOCH",1,2],["Repair_EPOCH",1,2],["FAK",1,5],["VehicleRepair",1,5],
-				["ItemSodaRbull",1,3],["ItemSodaOrangeSherbet",1,3],["ItemSodaPurple",1,3],["ItemSodaMocha",1,3],["ItemSodaBurst",1,3],
-				["CookedChicken_EPOCH",1,3],["CookedGoat_EPOCH",1,3],["CookedSheep_EPOCH",1,3],["FoodSnooter",1,3],["FoodMeeps",1,3],["FoodBioMeat",1,3],["ItemTuna",1,3],["ItemSeaBass",1,3],["ItemTrout",1,3]
+			[	//Items
+					["Exile_Item_InstaDoc",1,2],["Exile_Item_DuctTape",1,4],["Rangefinder",1,3],
+				
+				["Exile_Item_PlasticBottleFreshWater",1,3],["Exile_Item_GloriousKnakworst",1,3],["Exile_Item_Surstromming",1,3],
 			],
 			[ // Backpacks
-				["B_AssaultPack_dgtl",0,2],["B_AssaultPack_khk",0,2],["B_AssaultPack_mcamo",0,2],["B_AssaultPack_ocamo",0,2],["B_AssaultPack_rgr",0,2],["B_AssaultPack_sgg",0,2],
-				["B_Carryall_cbr",0,2],["B_Carryall_khk",0,2],["B_Carryall_mcamo",0,2],["B_Carryall_ocamo",0,2],["B_Carryall_oli",0,2],["B_Carryall_oucamo",0,2],["B_FieldPack_blk",0,2],
-				["B_FieldPack_cbr",0,2],["B_FieldPack_khk",0,2],["B_FieldPack_ocamo",0,2],["B_FieldPack_oli",0,2],["B_FieldPack_oucamo",0,2],["B_Kitbag_cbr",0,2],["B_Kitbag_mcamo",0,2],
-				["B_Kitbag_rgr",0,2],["B_Kitbag_sgg",0,2],["B_Parachute",0,2],["B_TacticalPack_blk",0,2],["B_TacticalPack_mcamo",0,2],["B_TacticalPack_ocamo",0,2],["B_TacticalPack_oli",0,2],
-				["B_TacticalPack_rgr",0,2],["smallbackpack_red_epoch",0,2],["smallbackpack_green_epoch",0,2],["smallbackpack_teal_epoch",0,2],["smallbackpack_pink_epoch",0,2]
+				["B_AssaultPack_dgtl",1,2],["B_AssaultPack_khk",1,2],["B_AssaultPack_mcamo",1,2],["B_AssaultPack_ocamo",1,2],["B_AssaultPack_rgr",1,2],["B_AssaultPack_sgg",1,2],
+				["B_Carryall_cbr",1,2],["B_Carryall_khk",1,2],["B_Carryall_mcamo",1,2],["B_Carryall_ocamo",1,2],["B_Carryall_oli",1,2],["B_Carryall_oucamo",1,2],["B_FieldPack_blk",1,2],
+				["B_FieldPack_cbr",1,2],["B_FieldPack_khk",1,2],["B_FieldPack_ocamo",1,2],["B_FieldPack_oli",1,2],["B_FieldPack_oucamo",1,2],["B_Kitbag_cbr",1,2],["B_Kitbag_mcamo",1,2],
+				["B_Kitbag_rgr",1,2],["B_Kitbag_sgg",1,2],["B_Parachute",1,2],["B_TacticalPack_blk",1,2],["B_TacticalPack_mcamo",1,2],["B_TacticalPack_ocamo",1,2],["B_TacticalPack_oli",1,2],
+				["B_TacticalPack_rgr",1,2]
 			]
 		];
 	
 	blck_BoxesLoot_Minor2 = 
 		[	
-			[// Weapons
-				["MultiGun","EnergyPackLg"],
+			[	// Weapons
+				
 				["arifle_Katiba_F","30Rnd_65x39_caseless_green"],
 				["arifle_Katiba_GL_F","30Rnd_65x39_caseless_green"],
 				["arifle_Mk20_F","30Rnd_556x45_Stanag"],
@@ -601,26 +534,19 @@ for examples of how you can do this see \Major\Compositions.sqf
 				["arifle_MXM_F","30Rnd_65x39_caseless_mag"],
 				["arifle_SDAR_F","20Rnd_556x45_UW_mag"],
 				["arifle_TRG20_F","30Rnd_556x45_Stanag"],
-				["m16_EPOCH","30Rnd_556x45_Stanag"],
-				["m16Red_EPOCH","30Rnd_556x45_Stanag"],
-				["M14_EPOCH","20Rnd_762x51_Mag"],
-				["M14Grn_EPOCH","20Rnd_762x51_Mag"],
-				["m4a3_EPOCH","30Rnd_556x45_Stanag"],
+				
 				["SMG_02_F","30Rnd_9x21_Mag"],
 				["SMG_01_F","30Rnd_45ACP_Mag_SMG_01"],
 				["Hgun_PDW2000_F","30Rnd_9x21_Mag"],
-				["M14_EPOCH","20Rnd_762x51_Mag"],
-				["M14Grn_EPOCH","20Rnd_762x51_Mag"],				
+				
 				["arifle_MXM_F","30Rnd_65x39_caseless_mag_Tracer"],
 				["arifle_MXM_Black_F","30Rnd_65x39_caseless_mag_Tracer"],				
-				["m107_EPOCH","5Rnd_127x108_Mag"],
-				["m107Tan_EPOCH","5Rnd_127x108_Mag"],				
+				
 				["srifle_DMR_01_F","10Rnd_762x51_Mag"],
 				["srifle_LRR_F","7Rnd_408_Mag"],
 				["srifle_EBR_F","20Rnd_762x51_Mag"],
 				["srifle_GM6_F","5Rnd_127x108_APDS_Mag"],
-				["m249_EPOCH","200Rnd_556x45_M249"],
-				["m249Tan_EPOCH","200Rnd_556x45_M249"],
+				
 				["LMG_Mk200_F","200Rnd_65x39_cased_Box_Tracer"],
 				["Arifle_MX_SW_F","100Rnd_65x39_caseless_mag_Tracer"],
 				["Arifle_MX_SW_Black_F","100Rnd_65x39_caseless_mag_Tracer"],
@@ -629,7 +555,7 @@ for examples of how you can do this see \Major\Compositions.sqf
 				["srifle_DMR_04_Tan_F","10Rnd_338_Mag"],
 				["srifle_DMR_06_camo_F","10Rnd_338_Mag"]
 			],
-			[//Magazines
+			[	//Magazines
 		
 				["3rnd_HE_Grenade_Shell",1,5],["30Rnd_65x39_caseless_green",3,6],["30Rnd_556x45_Stanag",3,6],["30Rnd_556x45_Stanag",3,6],["30Rnd_45ACP_Mag_SMG_01",3,6],["20Rnd_556x45_UW_mag",3,6],
 				["10Rnd_762x51_Mag",3,6],["20Rnd_762x51_Mag",3,7],["200Rnd_65x39_cased_Box",3,6],["100Rnd_65x39_caseless_mag_Tracer",3,6],
@@ -649,31 +575,18 @@ for examples of how you can do this see \Major\Compositions.sqf
 				["optic_tws",1,3],["optic_tws_mg",1,3],["muzzle_snds_H",1,3],["muzzle_snds_L",1,3],["muzzle_snds_M",1,3],["muzzle_snds_B",1,3],["muzzle_snds_H_MG",1,3],["muzzle_snds_acp",1,3],
 				["optic_AMS_khk",1,3],["optic_KHS_blk",1,3],["optic_KHS_hex",1,3],["optic_KHS_old",1,3],["optic_KHS_tan",1,3]
 			],			
-			[	
-				["CinderBlocks",2,7], 
-				["jerrycan_epoch",1,3],
-				["lighter_epoch",1,1],
-				["CircuitParts",2,6],
-				["WoodLog_EPOCH",10,20],
-				["ItemCorrugatedLg",0,5],
-				["ItemCorrugated",3,7],
-				["ItemMixOil",1,2],
-				["MortarBucket",2,5],
-				["PartPlankPack",10,12],
-				["ItemLockbox",1,2],
-				["EnergyPackLg",0,1]
-			],
-			[//Items
-				["Heal_EPOCH",1,2],["Defib_EPOCH",1,2],["Repair_EPOCH",1,2],["FAK",1,2],["VehicleRepair",1,3],
-				["ItemSodaRbull",1,3],["ItemSodaOrangeSherbet",1,3],["ItemSodaPurple",1,3],["ItemSodaMocha",1,3],["ItemSodaBurst",1,3],
-				["CookedChicken_EPOCH",1,3],["CookedGoat_EPOCH",1,3],["CookedSheep_EPOCH",1,3],["FoodSnooter",1,3],["FoodMeeps",1,3],["FoodBioMeat",1,3],["ItemTuna",1,3],["ItemSeaBass",1,3],["ItemTrout",1,3]
+		
+			[	//Items
+					["Exile_Item_InstaDoc",1,2],["Exile_Item_DuctTape",1,4],["Rangefinder",1,3],
+				
+				["Exile_Item_PlasticBottleFreshWater",1,3],["Exile_Item_GloriousKnakworst",1,3],["Exile_Item_Surstromming",1,3],
 			],
 			[ // Backpacks
-				["B_AssaultPack_dgtl",0,2],["B_AssaultPack_khk",0,2],["B_AssaultPack_mcamo",0,2],["B_AssaultPack_ocamo",0,2],["B_AssaultPack_rgr",0,2],["B_AssaultPack_sgg",0,2],
-				["B_Carryall_cbr",0,2],["B_Carryall_khk",0,2],["B_Carryall_mcamo",0,2],["B_Carryall_ocamo",0,2],["B_Carryall_oli",0,2],["B_Carryall_oucamo",0,2],["B_FieldPack_blk",0,2],
-				["B_FieldPack_cbr",0,2],["B_FieldPack_khk",0,2],["B_FieldPack_ocamo",0,2],["B_FieldPack_oli",0,2],["B_FieldPack_oucamo",0,2],["B_Kitbag_cbr",0,2],["B_Kitbag_mcamo",0,2],
-				["B_Kitbag_rgr",0,2],["B_Kitbag_sgg",0,2],["B_Parachute",0,2],["B_TacticalPack_blk",0,2],["B_TacticalPack_mcamo",0,2],["B_TacticalPack_ocamo",0,2],["B_TacticalPack_oli",0,2],
-				["B_TacticalPack_rgr",0,2],["smallbackpack_red_epoch",0,2],["smallbackpack_green_epoch",0,2],["smallbackpack_teal_epoch",0,2],["smallbackpack_pink_epoch",0,2]
+				["B_AssaultPack_dgtl",1,2],["B_AssaultPack_khk",1,2],["B_AssaultPack_mcamo",1,2],["B_AssaultPack_ocamo",1,2],["B_AssaultPack_rgr",1,2],["B_AssaultPack_sgg",1,2],
+				["B_Carryall_cbr",1,2],["B_Carryall_khk",1,2],["B_Carryall_mcamo",1,2],["B_Carryall_ocamo",1,2],["B_Carryall_oli",1,2],["B_Carryall_oucamo",1,2],["B_FieldPack_blk",1,2],
+				["B_FieldPack_cbr",1,2],["B_FieldPack_khk",1,2],["B_FieldPack_ocamo",1,2],["B_FieldPack_oli",1,2],["B_FieldPack_oucamo",1,2],["B_Kitbag_cbr",1,2],["B_Kitbag_mcamo",1,2],
+				["B_Kitbag_rgr",1,2],["B_Kitbag_sgg",1,2],["B_Parachute",1,2],["B_TacticalPack_blk",1,2],["B_TacticalPack_mcamo",1,2],["B_TacticalPack_ocamo",1,2],["B_TacticalPack_oli",1,2],
+				["B_TacticalPack_rgr",1,2]
 			]
 		];
 
