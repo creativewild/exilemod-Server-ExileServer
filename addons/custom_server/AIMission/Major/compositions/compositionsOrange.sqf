@@ -17,7 +17,8 @@ _crateLoot =
 				["optic_KHS_tan","optic_Hamr","optic_Holosight","optic_ACO_grn","optic_SOS","optic_tws"1,3]
 			],
 			[//Items
-				["Exile_Item_PlasticBottleFreshWater","Exile_Item_GloriousKnakworst","Exile_Item_SausageGravy","Rangefinder","ItemGPS","Exile_Item_Matches","Exile_Item_CookingPot","Exile_Item_InstaDoc""1,3]
+				["Exile_Item_PlasticBottleFreshWater","Exile_Item_GloriousKnakworst","Exile_Item_SausageGravy","Rangefinder",
+				"ItemGPS","Exile_Item_Matches","Exile_Item_CookingPot","Exile_Item_InstaDoc"]
 			],
 			[ // Backpacks
 				["B_Carryall_khk"1,2]

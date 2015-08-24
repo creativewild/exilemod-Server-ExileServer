@@ -37,7 +37,15 @@ Last modified 8/1/15
 	blck_useSignalEnd = true; // When true a smoke grenade will appear at the loot crate for 2 min after mission completion.
 	
 	// PLAYER PENALTIES
-	
+	blck_RunGear = false;	// When set to true, AI that have been run over will ve stripped of gear, and the vehicle will be given blck_RunGearDamage of damage.		+	
+	blck_RunGearDamage = 0.2; // Damage applied to player vehicle for each AI run over		
+	blck_VK_Gear = false; // When set to true, AI that have been killed by a player in a vehicle in the list of forbidden vehicles or using a forbiden gun will be stripped of gear and the vehicle will be given blck_RunGearDamage of damage		
+	blck_VK_RunoverDamage = false; // when the AI was run over blck_RunGearDamage of damage will be applied to the killer's vehicle.		
+	blck_VK_GunnerDamage = false; // when the AI was killed by a gunner on a vehicle that is is in the list of forbidden vehicles, blck_RunGearDamage of damage will be applied to the killer's vehicle each time an AI is killed with a vehicle's gun.		
+	blck_forbidenVehicles = []; // Add any vehicles for which you wish to forbid vehicle kills			
+	// For a listing of the guns mounted on various land vehicles see the following link: https://community.bistudio.com/wiki/Arma_3_CfgWeapons_Vehicle_Weapons		
+	// HMG_M2 is mounted on the armed offroad that is spawned by Epoch			
+	blck_forbidenVehicleGuns = []; // Add any vehicles for which you wish to forbid vehicle kills, o
 	
 	// GLOBAL MISSION PARAMETERS
 	blck_useMines = false;   // when true mines are spawned around the mission area. these are cleaned up when a player reaches the crate.
@@ -335,10 +343,12 @@ for examples of how you can do this see \Major\Compositions.sqf
 				
 			],
 			[//Items
-				["Exile_Item_InstaDoc",1,2],["Exile_Item_DuctTape",1,4],["Rangefinder",1,3],
-				
-				["Exile_Item_PlasticBottleFreshWater",1,3],["Exile_Item_GloriousKnakworst",1,3],["Exile_Item_Surstromming",1,3],
-				
+				["Exile_Item_InstaDoc",1,2],
+				["Exile_Item_DuctTape",1,4],
+				["Rangefinder",1,3],				
+				["Exile_Item_PlasticBottleFreshWater",1,3],
+				["Exile_Item_GloriousKnakworst",1,3],
+				["Exile_Item_Surstromming",1,3]				
 			],
 			[ // Backpacks
 				["B_AssaultPack_dgtl",1,2],["B_AssaultPack_khk",1,2],["B_AssaultPack_mcamo",1,2],["B_AssaultPack_ocamo",1,2],["B_AssaultPack_rgr",1,2],["B_AssaultPack_sgg",1,2],
@@ -424,9 +434,12 @@ for examples of how you can do this see \Major\Compositions.sqf
 				
 			],
 			[	//Items
-					["Exile_Item_InstaDoc",1,2],["Exile_Item_DuctTape",1,4],["Rangefinder",1,3],
-				
-				["Exile_Item_PlasticBottleFreshWater",1,3],["Exile_Item_GloriousKnakworst",1,3],["Exile_Item_Surstromming",1,3],
+				["Exile_Item_InstaDoc",1,2],
+				["Exile_Item_DuctTape",1,4],
+				["Rangefinder",1,3],				
+				["Exile_Item_PlasticBottleFreshWater",1,3],
+				["Exile_Item_GloriousKnakworst",1,3],
+				["Exile_Item_Surstromming",1,3]
 			],
 			[  // Backpacks
 				["B_AssaultPack_dgtl",1,2],["B_AssaultPack_khk",1,2],["B_AssaultPack_mcamo",1,2],["B_AssaultPack_ocamo",1,2],["B_AssaultPack_rgr",1,2],["B_AssaultPack_sgg",1,2],
@@ -503,9 +516,12 @@ for examples of how you can do this see \Major\Compositions.sqf
 				
 			],
 			[	//Items
-					["Exile_Item_InstaDoc",1,2],["Exile_Item_DuctTape",1,4],["Rangefinder",1,3],
-				
-				["Exile_Item_PlasticBottleFreshWater",1,3],["Exile_Item_GloriousKnakworst",1,3],["Exile_Item_Surstromming",1,3],
+				["Exile_Item_InstaDoc",1,2],
+				["Exile_Item_DuctTape",1,4],
+				["Rangefinder",1,3],				
+				["Exile_Item_PlasticBottleFreshWater",1,3],
+				["Exile_Item_GloriousKnakworst",1,3],
+				["Exile_Item_Surstromming",1,3]
 			],
 			[ // Backpacks
 				["B_AssaultPack_dgtl",1,2],["B_AssaultPack_khk",1,2],["B_AssaultPack_mcamo",1,2],["B_AssaultPack_ocamo",1,2],["B_AssaultPack_rgr",1,2],["B_AssaultPack_sgg",1,2],
@@ -577,9 +593,12 @@ for examples of how you can do this see \Major\Compositions.sqf
 			],			
 		
 			[	//Items
-					["Exile_Item_InstaDoc",1,2],["Exile_Item_DuctTape",1,4],["Rangefinder",1,3],
-				
-				["Exile_Item_PlasticBottleFreshWater",1,3],["Exile_Item_GloriousKnakworst",1,3],["Exile_Item_Surstromming",1,3],
+				["Exile_Item_InstaDoc",1,2],
+				["Exile_Item_DuctTape",1,4],
+				["Rangefinder",1,3],				
+				["Exile_Item_PlasticBottleFreshWater",1,3],
+				["Exile_Item_GloriousKnakworst",1,3],
+				["Exile_Item_Surstromming",1,3]
 			],
 			[ // Backpacks
 				["B_AssaultPack_dgtl",1,2],["B_AssaultPack_khk",1,2],["B_AssaultPack_mcamo",1,2],["B_AssaultPack_ocamo",1,2],["B_AssaultPack_rgr",1,2],["B_AssaultPack_sgg",1,2],
