@@ -1,5 +1,5 @@
 /*
-Mission Compositions by Bill prepared for DBD Clan
+Mission Composition
 */
 private ["_default","_resupplyCamp","_redCamp","_medicalCamp","_crateLoot"];
 
@@ -7,24 +7,20 @@ _crateLoot =
 		[  
 			[// Weapons	
 				
-				["srifle_DMR_06_olive_F","20Rnd_762x51_Mag"]		
+				["SMG_01_F","LMG_Zafir_F","hgun_Pistol_heavy_01_F","srifle_DMR_01_F","srifle_DMR_05_hex_F"]		
 			],
 			[//Magazines
 
 				["10Rnd_93x64_DMR_05_Mag" ,1,4]				
 			],			
 			[  // Optics
-				["optic_KHS_tan",1,3]
-			],
-			[// Materials and supplies				
-
-				["EnergyPackLg",1,3]
+				["optic_KHS_tan","optic_Hamr","optic_Holosight","optic_ACO_grn","optic_SOS","optic_tws"1,3]
 			],
 			[//Items
-				["ItemTrout",1,3]
+				["Exile_Item_PlasticBottleFreshWater","Exile_Item_GloriousKnakworst","Exile_Item_SausageGravy","Rangefinder","ItemGPS","Exile_Item_Matches","Exile_Item_CookingPot","Exile_Item_InstaDoc""1,3]
 			],
 			[ // Backpacks
-				["smallbackpack_pink_epoch",1,2]
+				["B_Carryall_khk"1,2]
 			]
 	];	
 /* Nested arrays are:
@@ -40,9 +36,9 @@ _crateLoot =
 
 _default = [ //  Start, end message and map marker
 	[  // mesasges
-		"A group of Bandits was sighted in a nearby sector! Check the Orange marker on your map for the location!", // Mission Start message 1 for players
-		"The Sector at the Orange Marker is under survivor control!",												// Mission End message for player
-		"Bandit Patrol"																								// Map marker label
+		"An independant unit was sighted in a nearby sector! Check the Orange marker on your map for the location!", // Mission Start message 1 for players
+		"The Sector at the Orange Marker is under prisoner control!",												// Mission End message for player
+		"Independant Contact"																								// Map marker label
 	],
 	[  // Map objects
 
@@ -56,9 +52,9 @@ _default = [ //  Start, end message and map marker
 
 _default2 = [
 	[  // Select 0
-		"A group of Bandits was sighted in a nearby sector! Check the Orange marker on your map for the location!", // Mission Start message 1 for players
-		"The Sector at the Orange Marker is under survivor control!",												// Mission End message for player
-		"Bandit Patrol"																								// Map marker label
+		"An independant unit was sighted in a nearby sector! Check the Orange marker on your map for the location!", // Mission Start message 1 for players
+		"The Sector at the Orange Marker is under prisoner control!",												// Mission End message for player
+		"Indepentant Contact"																								// Map marker label
 	],
 	[  // Select 1
 	// This nested array defines loot crates to be spawned at the mission.
@@ -79,7 +75,7 @@ _default2 = [
 		// values are: number of things from the weapons, magazines, optics, materials(cinder etc), items (food etc) and backpacks arrays to add, respectively.
 		// The idea here was that you could define the position of loot boxes relative to buildings and bunkers so set them in 3D space as you wished.
 		["Box_NATO_Wps_F",[0,0,0],_crateLoot,[0,0,0,7,7,1]],  // Standard loot crate with standard loadout
-		["Land_PaperBox_C_EPOCH",[-5,-5,0],blck_BoxLoot_Major,[0,0,0,10,10,3]],  	// No Weapons, Magazines, or optics; 10 each construction supplies and food/drink items, 3 backpacks
+		
 		["Land_CargoBox_V1_F",[7, 5.4,0],blck_BoxLoot_Major,[0,15,7,10,0,0]]
 	],
 	[	 // select 3
@@ -95,8 +91,8 @@ _default2 = [
 _resupplyCamp = 
 [
 	[
-		"A Bandit resupply camp has been spotted. Check the Orange marker on your map for its location",
-		"The Bandit resupply camp the Orange Marker is under player control",
+		"An independant resupply camp has been spotted. Check the Orange marker on your map for its location",
+		"The Independant resupply camp the Orange Marker is under player control",
 		"Resupply Camp"
 	],
 	[
@@ -114,7 +110,7 @@ _resupplyCamp =
 	],
 	[
 		["Box_NATO_Wps_F",[0,0,0],blck_BoxLoot_Major,blck_lootCountsMajor],  // Standard loot crate with standard loadout
-		["Land_PaperBox_C_EPOCH",[-5,-5,0],blck_BoxLoot_Major,[0,0,0,10,10,3]],  	// No Weapons, Magazines, or optics; 10 each construction supplies and food/drink items, 3 backpacks
+		
 		["Land_CargoBox_V1_F",[7, 5.4,0],blck_BoxLoot_Major,[0,15,7,10,0,0]]
 	],
 	[],  // select 3
