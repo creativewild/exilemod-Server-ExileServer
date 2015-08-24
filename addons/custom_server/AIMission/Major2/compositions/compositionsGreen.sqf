@@ -13,7 +13,7 @@ _default = [
 	[  // buildings
 	],
 	[  // loot
-		["Box_NATO_Wps_F",[0,0,0],blck_BoxesLoot_Major2,blck_lootCountsMajor2],  // Standard loot crate with standard loadout
+		["Box_NATO_Wps_F",[0,0,0],blck_BoxesLoot_Major2,blck_lootCountsMajor2]  // Standard loot crate with standard loadout
 	
 		//["Land_CargoBox_V1_F",[7, 5.4,0],_crateLoot/*blck_BoxLoot_Major*/,[0,15,7,10,0,0]]	 // Weapons, magazines, optics, nothing else
 	],
